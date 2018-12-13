@@ -35,11 +35,11 @@ Vagrant.configure(2) do |config|
   end
 
   # Increase memory for Parallels Desktop
-  config.vm.provider 'parallels' do |p, o|
+  config.vm.provider 'parallels' do |p|
     p.memory = '1024'
   end
 
-  # Increase memory for VMware 
+  # Increase memory for VMware
   %w(vmware_fusion vmware_workstation).each do |p|
     config.vm.provider p do |v|
       v.vmx['memsize'] = '1024'
