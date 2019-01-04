@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision 'shell', path: 'scripts/install_tools.sh'
   
   # Servers
-  1.upto(1) do |i|
+  1.upto(3) do |i|
     vm_name = "nomad-server#{i}"
     vm_ip = "192.68.50.1#{i}"
     config.vm.define vm_name do |server|
